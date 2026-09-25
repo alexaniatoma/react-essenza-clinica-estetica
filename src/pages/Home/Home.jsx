@@ -157,6 +157,28 @@ export default function Home() {
           </div>
         </div>        
       </section>
+      <section className="bg-[#E8DED2] px-8 py-20">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
+          <div>
+            <h2 className="font-serif text-4xl md:text-5xl font-medium text-[#68705A]">Visite a Essenza</h2>        
+            <p className="mt-6 text-[#6B5B50] leading-relaxed">
+              Estamos em Santos, em um ambiente pensado para proporcionar conforto, acolhimento e bem-estar.
+            </p>
+            <div className="mt-8 text-[#6B5B50] leading-relaxed">
+              <p>Rua Exemplo, 123 - Santos, SP</p>
+              <p>(13)00000-0000</p>
+            </div>
+          </div>          
+        </div>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d466427.50519109034!2d-46.61213765260199!3d-24.03230343729383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1790348926726!5m2!1spt-BR!2sbr" 
+            className="w-full h-80 md:h-[450px] rounded-lg shadow-md mt-8"              
+            allowFullscreen
+            loading="lazy" 
+            referrerPolicy="strict-origin-when-cross-origin">            
+          </iframe>
+        </div>
+      </section>
     </main>
-  );
+  )
 }
