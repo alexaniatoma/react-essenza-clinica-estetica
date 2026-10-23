@@ -1,7 +1,13 @@
+import imagemFaciais from "../assets/imagemFaciais.jpg";
+import imagemInjetaveis from "../assets/imagemInjetaveis.jpg";
+import imagemCorporais from "../assets/imagemCorporais.jpg";
+import imagemDepilacaoLaser from "../assets/imagemLaser.jpg";
+
 const tratamentos = [
     {
         id: "faciais",
         categoria: "Tratamentos faciais",
+        imagem: imagemFaciais,
         procedimentos: [
             {
                 id:"limpeza-de-pele",
@@ -24,6 +30,7 @@ const tratamentos = [
     {
         id: "injetaveis",
         categoria: "Tratamentos injetáveis",
+        imagem: imagemInjetaveis,
         procedimentos: [
             {
                 id:"botox",
@@ -40,6 +47,7 @@ const tratamentos = [
     {
         id: "corporais",
         categoria: "Tratamentos corporais",
+        imagem: imagemCorporais,
         procedimentos: [
             {
                 id:"massagem-modeladora",
@@ -56,6 +64,7 @@ const tratamentos = [
     {
         id: "depilacao-laser",
         categoria: "Depilação a laser",
+        imagem: imagemDepilacaoLaser,
         procedimentos: [
             {
                 id:"depilacao-laser",

@@ -1,7 +1,6 @@
 import tratamentos from "../../data/tratamentos";
 import TratamentoCard from "../../components/TratamentoCard";
 
-
 export default function Tratamentos() {
   return (
     <main>
@@ -15,57 +14,60 @@ export default function Tratamentos() {
       </section>
       <section className="bg-[#FAF9F6] px-8 py-12">
         <div className="mx-auto max-w-5xl">
-          <nav aria-label="Navegação por categorias de tratamentos"
-            className="flex flex-wrap justify-center gap-4">
-              {tratamentos.map((categoria) => (
-                <a
-                  key={categoria.id}
-                  href={`#${categoria.id}`}
-                  className="rounded-full border border-[#68705A/40] px-6 py-3 text-[#68705A] transition duration-300 hover:bg-[#68705A] hover:text-[#FAF9F6]">
-                    {categoria.categoria}
-                </a>
-              ))}
+          <nav aria-label="Navegação por categorias de tratamentos" className="flex flex-wrap justify-center gap-4">
+            {tratamentos.map((categoria) => (
+              <a
+                key={categoria.id}
+                href={`#${categoria.id}`}
+                className="rounded-full border border-[#68705A/40] px-6 py-3 text-[#68705A] transition duration-300 hover:bg-[#68705A] hover:text-[#FAF9F6]"
+              >
+                {categoria.categoria}
+              </a>
+            ))}
           </nav>
-
         </div>
       </section>
       {tratamentos.map((categoria, index) => (
-      <section
-        key={categoria.id}
-        id={categoria.id}
-        className={`px-8 py-20 ${
-        index % 2 === 0 ? "bg-[#E8DED2]" : "bg-[#FAF9F6]"
-        }`}        
-      >          
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h2 className="font-serif text-4xl md:text-5xl font-medium text-[#68705A]">{categoria.categoria}</h2>
-            <p className="mt-6 text-lg text-[#6B5B50] leading-relaxed max-w-2xl mx-auto">
-              Cuidados personalizados para valorizar sua pele e realçar sua beleza natural.
-            </p>
-          </div>
-          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categoria.procedimentos.map((procedimento) => (
-              <TratamentoCard
-                key={procedimento.id}
-                nome={procedimento.nome}
-                descricao={procedimento.descricao}
+        <section
+          key={categoria.id}
+          id={categoria.id}
+          className={`px-8 py-20 ${index % 2 === 0 ? "bg-[#E8DED2]" : "bg-[#FAF9F6]"}`}
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className={`grid items-center gap-10 md:grid-cols-2 ${index % 2 === 0 ? "" : "md:[&>img]:order-2"}`}>
+              <img
+                src={categoria.imagem}
+                alt={categoria.categoria}
+                className="h-72 w-full rounded-lg object-cover shadow-md md:h-96"
               />
-            ))}
-             
+              <div>
+                <h2 className="font-serif text-4xl md:text-5xl font-medium text-[#68705A]">{categoria.categoria}</h2>
+                <p className="mt-6 text-lg text-[#6B5B50] leading-relaxed max-w-2xl mx-auto">
+                  Cuidados personalizados para valorizar sua pele e realçar sua beleza natural.
+                </p>
+              </div>
+            </div>
+            <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {categoria.procedimentos.map((procedimento) => (
+                <TratamentoCard key={procedimento.id} nome={procedimento.nome} descricao={procedimento.descricao} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       ))}
       <section className="bg-[#E8DED2] px-8 py-20 text-center">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-serif text-3xl font-medium text-[#6B5B50] md:text-4xl">Seu momento de cuidado começa aqui</h2>
-          <p className="mt-8 inline-block rounded-full bg-[#FAF9F6] px-8 py-3 font-medium text-[#68705A] transition duration-300 hover:bg-[#E8DED2]">Cada pessoa é única. Agende uma avaliação e descubra quais tratamentos fazem sentido para você</p>
+          <h2 className="font-serif text-3xl font-medium text-[#6B5B50] md:text-4xl">
+            Seu momento de cuidado começa aqui
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#68705A] md:text-lg">
+            Cada pessoa é única. Agende uma avaliação e descubra quais tratamentos fazem sentido para você
+          </p>
           <a
             href="https://wa.me/5513000000000"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-full bg-[#FAF9F6] px-8 py-3 font-medium text-[#68705A] transition duration-300 hover:bg-[#E8DED2]"
+            className="mt-8 inline-block rounded-full bg-[#68705A] px-8 py-4 font-medium text-[#FAF9F6] transition-colors duration-300 hover:bg-[#526047] focus-visible:outline-offset-4 focus-visible:outline-[#68705A]"
           >
             Agende sua avaliação
           </a>
