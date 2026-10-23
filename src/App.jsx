@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Clinica from "./pages/Clinica/Clinica";
 import Tratamentos from "./pages/Tratamentos/Tratamentos";
 import Profissionais from "./pages/Profissionais/Profissionais";
+import Contato from "./pages/Contato/Contato"
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/clinica" element={<Clinica />} />
           <Route path="/tratamentos" element={<Tratamentos />} />
           <Route path="/profissionais" element={<Profissionais />} />
+          <Route path="contato" element={<Contato />} />
           
         </Routes>
       <Footer />
